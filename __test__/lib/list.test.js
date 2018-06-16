@@ -25,11 +25,22 @@ describe('List', () => {
     expect(list[2]).toBe('baz');
   });
 
-  // it("pop() decreses length by 1",() => {
-  //     let list = new List();
-  //     list.pop('foo');
-  //     expect(list.length).toBe(-1);
-  // });
+  it('pop() decreses length by 1',() => {
+    let list = new List();
+    list.push('foo');
+    list.push('bar');
+    list.pop();
+    expect(list.length).toBe(1);
+  });
+
+  it('pop() decreses length by 1',() => {
+    let list = new List();
+    list.push('foo');
+    list.push('bar');
+    list.pop();
+    expect(list[0]).toBe('foo');
+  });
+
 
   it('map() iterates over the list and returns new array',() => {
     let list = new List();
@@ -37,6 +48,7 @@ describe('List', () => {
     list.push('bar');
     list.push('baz');
 
-    let newList = list.map( (val, i) =>`${i} - ${val}`);
+    let newList = list.map( (val, i) =>`${i} - ${val}`); //eslint-disable-line
   });
+
 });
