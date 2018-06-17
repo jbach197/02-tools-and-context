@@ -41,6 +41,24 @@ describe('List', () => {
     expect(list[0]).toBe('foo');
   });
 
+  it('foreach() iterates over the list,',() => {
+    let list = new List();
+    list.push('foo');
+    list.push('bar');
+    list.push('baz');
+
+    list = list.foreach( (val, i) =>`${i} - ${val}`); //eslint-disable-line
+  });
+
+  it('foreach() returns undefined if callback not provided',() => {
+    let list = new List();
+    list.push('foo');
+    list.push('bar');
+    list.push('baz');
+
+    list = list.foreach();
+    expect(list).toBe(undefined);
+  });
 
   it('map() iterates over the list and returns new array',() => {
     let list = new List();
@@ -49,6 +67,37 @@ describe('List', () => {
     list.push('baz');
 
     let newList = list.map( (val, i) =>`${i} - ${val}`); //eslint-disable-line
+  });
+
+  it('map() returns undefined if callback not provided',() => {
+    let list = new List();
+    list.push('foo');
+    list.push('bar');
+    list.push('baz');
+
+    let newList = list.map(); //eslint-disable-line
+    expect(newList).toBe(undefined);
+  });
+
+  it('filter() returns undefined if callback not provided',() => {
+    let list = new List();
+    list.push('foo');
+    list.push('bar');
+    list.push('baz');
+
+    let newList = list.filter(); //eslint-disable-line
+    expect(newList).toBe(undefined);
+  });
+
+  it('filter() iterates over the list returns expected results',() => {
+    let list = new List();
+    list.push('foo');
+    list.push('bar');
+    list.push('baz');
+
+    let newList = list.filter( (val, i) => val === 'foo'); //eslint-disable-line
+    expect(newList.length).toBe(1);
+    console.log(newList);
   });
 
 });
