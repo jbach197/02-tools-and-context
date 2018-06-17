@@ -2,7 +2,7 @@
 
 Link to Master: https://github.com/jbach197/02-tools-and-context
 Link to Pull Request: https://github.com/jbach197/02-tools-and-context/pull/1
-Link to Travis:
+Link to Travis: [![Build Status](https://travis-ci.com/jbach197/02-tools-and-context.svg?branch=lab02-jen)](https://travis-ci.com/jbach197/02-tools-and-context)
 
 # Installation Instructions
 1) Clone the repo
