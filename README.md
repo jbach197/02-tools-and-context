@@ -1,52 +1,36 @@
-![cf](https://i.imgur.com/7v5ASc8.png) 02: Tools and Context
-======
+# 02-Tools and Context
 
-## Submission Instructions
-* Work in a fork of this repository
-* Work in a branch on your fork
-* Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
-* Open a pull request to this repository
-* Submit on canvas a question and observation, how long you spent, and a link to your pull request
+Link to Master: https://github.com/jbach197/02-tools-and-context
+Link to Pull Request: https://github.com/jbach197/02-tools-and-context/pull/1
+Link to Travis: [![Build Status](https://travis-ci.com/jbach197/02-tools-and-context.svg?branch=lab02-jen)](https://travis-ci.com/jbach197/02-tools-and-context)
 
-## Configuration
-Configure the root of your repository with the following files and directories. Thoughtfully name and organize any additional configuration or module files.
-* **README.md** - contains documentation
-* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file
-* **.eslintrc.json** - contains the course linter configuratoin
-* **.eslintignore** - contains the course linter ignore configuration
-* **.travis.yml** - travis-ci configuration file
-* **package.json** - contains npm package config
-  * create a `lint` script for running eslint
-  * create a `test` script for running tests
-* **lib/** - contains module definitions
-* **\_\_test\_\_/** - contains unit tests
+# Installation Instructions
+1) Clone the repo
+2) Run npm i to install the dependencies
+3) Run npm test to complete the tests
+4) Run npm lint for the linter
 
-## Feature Tasks
+#Requirements
+* Implement a List constructor using a class with a length property.
+* Implement push() mentod on the List prototype to add items to the list.  The push method will take one parameter.  No restrictions on the type of data in the parameter.
+* Implement pop() method on the List prototype to remove the last item from the list and return the value.  The pop method does not take any parameters.
+* Implement forEach() method to execute a function on each element in an array.  The parameters are a call back function to execute, the array to traverse.  No return statement as the original array is mutated to be the new values after the callback function runs.
+* Implement a map() method to execute a function on each element in the array.  Returns a new array, of the same size as the original.  The parameters are a callback function to execute, array to traverse.
+* Implement a filter() method to execute a callback function that returns a new array that only contains elements that match the criteria in the callback function.  The parameters are a callback function and an array to traverse.
+* Do not use any built-in array methods to any of the above.
 
-#### List Module
-  * implement a List constructor using a constructor, factory, or class
-  * implement the length property
-  * implement `push()`, `pop()`, `shift()`, and `unshift()` methods on the List prototype
-  * implement `forEach()`, `map()`, `filter()`, and `reduce()` as pure methods on the List prototype
-  * implement `slice()`, and `splice()` as methods on the List prototype
-  * Do not use any built-in array methods to do this
-  
-#### Stretch Goals
-  * Repeat the above process, using call/apply/bind to interface with built-in array methods.
-  * e.g.
-  `map(list, callback) { 
-    return Array.prototype.map.call( list, callback ); 
-  }`
-
-## Testing
-Create a NodeJS module in the \_\_test\_\_/ directory named `list.test.js` that asserts the correctness of the list module.
-
+#Testing
 Use the `describe` and `it` (or `test`) methods to define descriptive tests and increase readablity
 Each `it` callback should aim to test a small, well defined, feature of a function - this may include:
   * tests that ensure the list module functions correctly with error-check parameters
   * tests that the correct errors are thrown with invalid arguments exist
   * tests to ensure that the list module functions return the correct results when invoked with valid arguments
 
-##  Documentation
-Include your travis badge at the top of your `README.md` file
-In your `README.md`, describe the exported values of each module you have defined. Every function description should include it's airty (expected number of parameters), the expected data for each parameter (data-type and limitations), and it's behavior (for both valid and invalid use). Feel free to add any additional information in your `README.md` that you would like.
+
+#Worked with and Credits
+Nothing specific.
+
+
+
+
+
